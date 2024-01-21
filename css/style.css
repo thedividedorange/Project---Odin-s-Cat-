@@ -21,7 +21,6 @@ button, ul li {
 }
 
 /*Nav bar*/
-
 header {
     margin: 10px 15% 0 15%;
 }
@@ -53,7 +52,6 @@ nav#navbar-main ul li a {
 }
 
 /*Hero section*/
-
 .hero-section {
     display: flex;
     flex-direction: row;
@@ -83,7 +81,6 @@ button#left-hero-button {
 }
 
 /*Main*/
-
 .main {
     display: flex;
     flex-direction: column;
@@ -113,8 +110,13 @@ div#portfolio-container {
     padding: 2.5em 0;
 }
 
-#portfolio-container  > div {
-    text-align: center;
+#portfolio-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18em;
+    justify-content: flex-start;
+    height: 25em;
 }
 
 figure.portfolio-figure {
@@ -125,6 +127,19 @@ figure.portfolio-figure {
     border-radius: 14px;
     border-width: thick;
     margin: 1em 0.5em;
+}
+
+figure.portfolio-figure img {
+    width: 18em;
+    height: 18em;
+    position: relative;
+    z-index: -2;
+}
+
+figcaption {
+    font-size: 1.6rem;
+    text-align: center;
+    color: #5b5b5b;
 }
 
 figure.portfolio-figure:hover {
