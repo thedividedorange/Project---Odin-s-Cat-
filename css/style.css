@@ -110,9 +110,10 @@ div#portfolio-container {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 2.5em 0;
 }
 
-#portfolio-container > div {
+/* #portfolio-container > div {
     text-align: center;
 }
 
@@ -128,6 +129,25 @@ box#portfolio-box {
 box#portfolio-box:hover {
     cursor: pointer;
     animation: border-glow 2s infinite alternate;
+} */
+
+#portfolio-container  > div {
+    text-align: center;
+}
+
+figure.portfolio-figure {
+    border: 1.5px solid #3882f6;
+    width: 18em;
+    display: block;
+    height: 18em;
+    border-radius: 14px;
+    border-width: thick;
+    margin: 1em 0.5em;
+}
+
+figure.portfolio-figure:hover {
+    cursor: pointer;
+    animation: border-glow 1s infinite alternate;
 }
 
 @keyframes border-glow {
