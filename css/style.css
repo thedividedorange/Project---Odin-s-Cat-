@@ -113,24 +113,6 @@ div#portfolio-container {
     padding: 2.5em 0;
 }
 
-/* #portfolio-container > div {
-    text-align: center;
-}
-
-box#portfolio-box {
-    border: 2px solid #3882f6;
-    width: 18em;
-    display: block;
-    height: 18em;
-    border-radius: 14px;
-    border-width: thick;
-}
-
-box#portfolio-box:hover {
-    cursor: pointer;
-    animation: border-glow 2s infinite alternate;
-} */
-
 #portfolio-container  > div {
     text-align: center;
 }
