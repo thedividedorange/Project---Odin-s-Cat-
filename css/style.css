@@ -33,6 +33,7 @@ p.header-txt {
     font-size: 3rem;
     margin: 0;
     text-shadow: -1px -3px #807777;
+    white-space: pre;
 }
 
 nav#navbar-main {
