@@ -8,7 +8,7 @@ html{
 
 body {
     margin: 0;
-    max-width: 100vw;
+    max-height: 100vw;
 }
 
 button, ul li {
@@ -56,20 +56,19 @@ nav#navbar-main ul li a {
 .hero-section {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 15% 0 15%;
+    flex-wrap: wrap;
+    align-items: normal;
     min-height: 40em;
+    margin: 10px 15% 2% 15%;
 }
 
 div#left-hero {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: flex-start;
+    justify-content: center;
     padding-right: 2em;
-    min-width: 29em;
-    flex: initial;
-    width: 40%;
+    flex: 1 1 20%;
 }
 
 #left-hero h1 {
@@ -87,26 +86,27 @@ div#left-hero {
 button#left-hero-button {
     background-color: #3882f6;
     border-radius: 5px;
+    margin-top: 2em;
+    padding: 8px 12px;
     font-size: 1.9rem;
     color: #ffff;
     border: 1px solid #3882f6;
-    padding: 4px 7px;
-    margin-top: 2em;
 }
 
 
 div#right-hero {
-    width: 60%;
-    min-width: 40em;
-    flex: auto;
+    display: flex;
+    flex: 1 1 auto;
 }
 
 div#right-hero iframe {
-    width: -webkit-fill-available;
-    padding: 1.5em;
+    padding: 0 1.5em;
     border: 1.5px solid #3882f6;
     border-radius: 14px;
     border-width: medium;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: stretch;
 }
 
 /*Main*/
@@ -132,10 +132,10 @@ section#info {
 
 div#portfolio-container {
     display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
     padding: 2.5em 0;
 }
 
@@ -143,17 +143,17 @@ div#portfolio-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 18em;
     justify-content: flex-start;
+    width: 18em;
     height: 25em;
 }
 
 figure.portfolio-figure {
-    border: 1.5px solid #3882f6;
-    width: 18em;
     display: block;
+    width: 18em;
     height: 18em;
     border-radius: 14px;
+    border: 1.5px solid #3882f6;
     border-width: thick;
     margin: 1em 0.5em;
 }
@@ -192,18 +192,17 @@ div#portfolio-container p {
 /*section 2*/
 
 section#quote {
-    background-color: #E5E7EB;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 44em;
-
+    background-color: #E5E7EB;
 }
 
 p.bigtext {
     font-size: 3.6rem;
     font-style: italic;
-    color: hsl(215, 28%, 17%);
+    color: #1f2937;
     font-weight: lighter;
     margin: 0 21%;
 }
@@ -230,10 +229,10 @@ b#big {
     justify-content: space-around;
     width: 100%;
     margin: 0 15%;
-    background: #3882f6;
-    border: none;
     border-radius: 9.5px;
     padding: 1.5em 2.7em;
+    background: #3882f6;
+    border: none;
 }
 
 .cta-signup h3 {
@@ -269,12 +268,57 @@ div#footer {
 }
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 828px) {
+    .hero-section.hero-mobile {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .hero-section.hero-mobile #left-hero h1, .hero-section.hero-mobile #left-hero p, .hero-section.hero-mobile #left-hero-button {
+        text-align: center;
+        align-self: center;
+    }
+
+    .hero-section.hero-mobile iframe {
+        border: 1.5px solid #3882f6;
+        border-radius: 14px;
+        border-width: medium;
+        width: auto;
+        align-self: center;
+        min-height: 22em;
+    }
+
+    .hero-section {
+        display:none;
+    }
 }
-@media only screen and (min-width: 769px) and (max-width: 1024px){
 
+@media only screen and (min-width: 829px) and (max-width: 1799px){
+    .hero-section.hero-mobile {
+        display:none;
+    }
 }
-@media only screen and (min-width: 1025px) {
-
+@media only screen and (min-width: 1800px) {
+    .hero-section {
+        margin: auto;
+        width: 1200px;
+    }
+    .hero-section.hero-mobile {
+        display:none;
+    }
+    p.bigtext {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+    b#big {
+        max-width: 1200px;
+    }
+    .cta-signup {
+    width: 1200px;
+    }
+    nav#navbar-main {
+    max-width: 1200px;
+    margin: auto;
+}
 }
