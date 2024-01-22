@@ -294,6 +294,10 @@ div#footer {
 }
 
 @media only screen and (max-width: 828px) {
+    p.header-txt {
+        font-size:2.4rem;
+    }
+
     .hero-section.hero-mobile {
         display:flex;
         flex-direction: column;
