@@ -8,7 +8,7 @@ html{
 
 body {
     margin: 0;
-    max-height: 100vw;
+    min-height: 100vw;
 }
 
 button, ul li {
@@ -26,12 +26,16 @@ header {
     margin: 10px 15% 0 15%;
 }
 
-img.header-img {
-    flex: none;
+p.header-txt {
+    display:block;
+    font-weight: 900;
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: -1px -3px #807777;
 }
 
 nav#navbar-main {
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -50,6 +54,8 @@ nav#navbar-main ul li {
 nav#navbar-main ul li a {
     font-size: 1.89rem;
     color: #e5e7eb;
+    text-decoration: none;
+
 }
 
 /*Hero section*/
@@ -59,7 +65,7 @@ nav#navbar-main ul li a {
     flex-wrap: wrap;
     align-items: normal;
     min-height: 40em;
-    margin: 10px 15% 2% 15%;
+    margin: 2% 15% 2% 15%;
 }
 
 div#left-hero {
@@ -107,6 +113,16 @@ div#right-hero iframe {
     width: -moz-available;
     width: -webkit-fill-available;
     width: stretch;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px -5px #3882f6;
+      }
+      to {
+        box-shadow: 0 0 6px 6px #3882f6;
+      }
 }
 
 /*Main*/
@@ -163,6 +179,7 @@ figure.portfolio-figure img {
     height: 18em;
     position: relative;
     z-index: -2;
+
 }
 
 figcaption {
@@ -173,10 +190,10 @@ figcaption {
 
 figure.portfolio-figure:hover {
     cursor: pointer;
-    animation: border-glow 1s infinite alternate;
+    animation: border-blink 1s infinite alternate;
 }
 
-@keyframes border-glow {
+@keyframes border-blink {
     0% {border-width:10px;border-color:#3882f6;transform: scale(1.3,1.3);}
     30% {border-width:10px;border-color:#2965c6;transform: scale(1.3,1.3);}
     60% {border-width:10px;border-color:#174ca2;transform: scale(1.3,1.3);}
@@ -190,7 +207,6 @@ div#portfolio-container p {
 }
 
 /*section 2*/
-
 section#quote {
     display: flex;
     flex-direction: column;
@@ -267,15 +283,30 @@ div#footer {
     padding: 0.3em;
 }
 
+/*Responsive*/
+@media only screen and (max-width: 450px){
+    nav#navbar-main ul {
+        display: flex;
+        column-gap: 5px;
+        padding-left: 2em;
+    }
+}
 
 @media only screen and (max-width: 828px) {
     .hero-section.hero-mobile {
         display:flex;
         flex-direction: column;
         align-items: center;
+        flex-wrap:nowrap;
     }
 
-    .hero-section.hero-mobile #left-hero h1, .hero-section.hero-mobile #left-hero p, .hero-section.hero-mobile #left-hero-button {
+    .hero-section.hero-mobile #left-hero {
+        padding-right: 0;
+    }
+
+    .hero-section.hero-mobile #left-hero h1, 
+    .hero-section.hero-mobile #left-hero p, 
+    .hero-section.hero-mobile #left-hero-button {
         text-align: center;
         align-self: center;
     }
@@ -299,9 +330,10 @@ div#footer {
         display:none;
     }
 }
+
 @media only screen and (min-width: 1800px) {
     .hero-section {
-        margin: auto;
+        margin: auto auto 2%;
         width: 1200px;
     }
     .hero-section.hero-mobile {
@@ -320,5 +352,5 @@ div#footer {
     nav#navbar-main {
     max-width: 1200px;
     margin: auto;
-}
+    }
 }
