@@ -16,6 +16,13 @@ Odin's Cat is more than just a webpage—it's a tribute to the feline companions
 
 This Project was Created for <a href="https://theodinproject.com" target="_blank">TheOdinProject</a>.
 
+## Clone the Repository
+
+To clone this repository and explore Odin's Cat locally, run the following command in your terminal:
+
+```bash
+git clone git@github.com:thedividedorange/Project-Odins-Cat.git
+
 ## HTML Overview
 
 ### `index.html`
