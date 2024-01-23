@@ -22,6 +22,7 @@ To clone this repository and explore Odin's Cat locally, run the following comma
 
 ```bash
 git clone git@github.com:thedividedorange/Project-Odins-Cat.git
+```
 
 ## HTML Overview
 
